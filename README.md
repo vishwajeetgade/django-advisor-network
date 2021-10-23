@@ -10,43 +10,16 @@
 
 ## dependencies 
 ```
-pip install
+pip install django==3.2.8
+pip install djangorestframework==3.12.4
+pip install django-dotenv==1.4.2
+pip install corsheaders==3.10
+pip install mysqlclient==2.0.3
+pip install PyJWT==1.7.1
 ```
-### django
-### djangorestframework
-### django-dotenv
-### mysqlclient
-### PyJWT==1.7.1
 
 
 ## How to run 
-create file manage.py in folder django-advisor-network and paste the below code
-```
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
-import os
-import sys
-import dotenv
-
-
-def main():
-    """Run administrative tasks."""
-    dotenv.read_dotenv()
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nurturelabsassignment.settings')
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
-
-
-if __name__ == '__main__':
-    main()
-```
 
 First create a MySQL database and connect to your database in .nurturelabsassignment.settings.py
 ## Run Following commands
